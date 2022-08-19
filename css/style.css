@@ -1,0 +1,39 @@
+@font-face {
+   font-family: 'douline';
+   src: url('');
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   scroll-behavior: smooth;
+}
+
+:root {}
+
+header {
+   position: fixed;
+   width: 100%;
+   top: 0;
+   left: 0;
+   display: grid;
+   grid-template-columns: 1fr .5fr;
+   padding: 25px 13%;
+}
+
+.navlist ul {
+   display: flex;
+   list-style: none;
+}
+
+.navlist li {
+   position: relative;
+   padding: 10px 20px;
+}
+
+.navlist li a {
+   color: #000;
+   text-decoration: none;
+   font-size: 22px;
+}
