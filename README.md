@@ -6,5 +6,7 @@
 # features
 * full Responsive
 
-
+# Would you like to help and support me?
+* Star and follow my Github repository
+...
 
