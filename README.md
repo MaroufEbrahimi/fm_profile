@@ -5,6 +5,8 @@
 
 # features
 * full Responsive
+* animation
+* loading animation
 
 # Would you like to help and support me?
 * Star and follow my Github repository
