@@ -22,7 +22,7 @@
 }
 
 :root {
-   --gen-color: #f38181;
+   --gen-color: rgb(243, 129, 129);
 }
 
 header {
@@ -34,6 +34,7 @@ header {
    justify-content: space-around;
    padding-top: 30px;
    transition: 0.3s;
+   z-index: 1000;
 }
 
 .header_logo img {
@@ -139,6 +140,7 @@ span {
 
 .showcase_info h1 {
    font-size: 70px;
+   font-family: 'bernditalic';
    color: #333;
    margin-bottom: 20px;
 }
@@ -159,11 +161,12 @@ span {
 .showcase_img img {
    position: absolute;
    height: 90%;
+   width: 75%;
    left: 50%;
    bottom: 0;
    transform: translateX(-50%);
    transition: bottom 1s, left 1s;
-   border-radius: 15%;
+   border-radius: 10%;
 }
 
 .showcase_img:hover .back_img {
