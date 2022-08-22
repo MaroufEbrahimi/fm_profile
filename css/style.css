@@ -22,7 +22,7 @@
 }
 
 :root {
-   --gen-color: #F38181;
+   --gen-color: #f38181;
 }
 
 header {
@@ -119,6 +119,59 @@ header {
 
 .side_menu ul a:hover {
    color: var(--gen-color);
+}
+
+.showcase {
+   padding: 100px 14%;
+   min-height: 100vh;
+   height: 100%;
+   width: 100%;
+   position: relative;
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   align-items: center;
+   grid-gap: 4rem;
+}
+
+span {
+   color: var(--gen-color);
+}
+
+.showcase_info h1 {
+   font-size: 70px;
+   color: #333;
+   margin-bottom: 20px;
+}
+
+.showcase_info p {
+   font-size: 20px;
+   line-height: 25px;
+}
+
+.showcase_img {
+   width: 45%;
+   height: 80%;
+   position: absolute;
+   bottom: 0;
+   right: 100px;
+}
+
+.showcase_img img {
+   position: absolute;
+   height: 90%;
+   left: 50%;
+   bottom: 0;
+   transform: translateX(-50%);
+   transition: bottom 1s, left 1s;
+   border-radius: 15%;
+}
+
+.showcase_img:hover .back_img {
+   bottom: 40px;
+}
+
+.showcase_img:hover .main_img {
+   left: 55%;
 }
 
 /* media query */
