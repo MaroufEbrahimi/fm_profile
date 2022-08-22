@@ -15,19 +15,31 @@
       <div class="header_logo">
          <a href="#"><img src="./img/logo.png" alt="logo"></a>
       </div>
-      <div class="navlist">
+      <div class="header_nav">
+         <div class="navlist">
+            <ul>
+               <li><a href="#home">Home</a></li>
+               <li><a href="#about">About</a></li>
+               <li><a href="#profile">Profile</a></li>
+               <li><a href="#service">Services</a></li>
+               <li><a href="#contact">Contact</a></li>
+            </ul>
+         </div>
+         <div class="menu_bar" onclick="openSide()">
+            <span></span>
+            <span></span>
+            <span></span>
+         </div>
+      </div>
+      <div class="side_menu" id="side">
          <ul>
+            <span class="side_menu_close" onclick="closeSide()">&times;</span>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#profile">Profile</a></li>
             <li><a href="#service">Services</a></li>
             <li><a href="#contact">Contact</a></li>
          </ul>
-         <div class="menu_bar" onclick="changeIcon()">
-            <div class="menu1"></div>
-            <div class="menu2"></div>
-            <div class="menu3"></div>
-         </div>
       </div>
    </header>
 
