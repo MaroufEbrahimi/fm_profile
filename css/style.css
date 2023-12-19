@@ -1,8 +1,8 @@
 /* ##______ General Styles _______## */
 :root {
   --bg-black-900: #f2f2fc;
-  --bg-black-100: #fdf9;
-  --bg-black-50: red;
+  --bg-black-100: #fdf9ff;
+  --bg-black-50: #e8dfec;
   --text-black-900: #302e4d;
   --text-black-700: #504e70;
 }
@@ -24,10 +24,40 @@ body {
 ::after {
   box-sizing: border-box;
 }
+.section {
+  background: var(--bg-black-900);
+  min-height: 100vh;
+  display: block;
+  position: fixed;
+  left: 270px;
+  top: 0;
+  right: 0;
+  z-index: 0;
+  opacity: 1;
+}
+
+ul {
+  list-style: none;
+}
 /* ##______ End of General Styles _______## */
 
 /* ##______ Aside Styles _______## */
 .aside {
   width: 270px;
   background: var(--bg-black-100);
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 30px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+.aside .logo {
+  position: absolute;
+  font-size: 30px;
+  top: 50px;
+  text-transform: capitalize;
 }
