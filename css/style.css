@@ -31,13 +31,11 @@ body {
   background: var(--bg-black-900);
   min-height: 100vh;
   display: block;
-  position: fixed;
-  left: 270px;
   padding: 0 30px;
-  top: 0;
-  right: 0;
-  z-index: 0;
   opacity: 1;
+}
+.main_content {
+  padding-left: 270px;
 }
 .padd_15 {
   padding-left: 15px;
@@ -58,6 +56,21 @@ ul {
   margin-left: -15px;
   margin-right: -15px;
   position: relative;
+}
+.btn {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 12px 35px;
+  color: white;
+  border: none;
+  border-radius: 40px;
+  display: inline-block;
+  white-space: nowrap;
+  background: var(--skin-color);
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  transform: scale(1.05);
 }
 /* ##______ General Styles (End) _______## */
 
@@ -92,7 +105,7 @@ ul {
 }
 .aside .logo a span {
   font-family: "Clicker Script", cursive;
-  font-family: 40px;
+  font-size: 40px;
 }
 .aside .logo a::before {
   content: "";
@@ -204,14 +217,41 @@ ul {
 .home .home_info h3.my_profession .typing {
   color: var(--skin-color);
 }
-
+.home_info p {
+  margin-bottom: 70px;
+  font-size: 20px;
+  color: var(--text-black-700);
+}
+/* home imtg */
 .home .home_img {
   flex: 0 0 40%;
   max-width: 40%;
   text-align: center;
   position: relative;
 }
+.home .home_img::after {
+  content: "";
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  border-bottom: 10px solid var(--skin-color);
+  border-right: 10px solid var(--skin-color);
+  right: -20px;
+  bottom: -40px;
+}
+.home .home_img::before {
+  content: "";
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  border-top: 10px solid var(--skin-color);
+  border-left: 10px solid var(--skin-color);
+  left: -20px;
+  top: -40px;
+}
 .home .home_img img {
+  margin: auto;
+  border-radius: 5px;
   height: 400px;
 }
 /* ##______ Home Styles (End) _______## */
