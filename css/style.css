@@ -311,4 +311,46 @@ ul {
 .about .about_content .about_text h3 span {
   color: var(--skin-color);
 }
+.about .about_content .about_text p {
+  font-size: 16px;
+  line-height: 25px;
+  color: var(--text-black-700);
+}
+/* personal info */
+.about .about_content .personal_info {
+  flex: 0 0 60%;
+  max-width: 0 0 60%;
+  margin-top: 40px;
+}
+.about .about_content .personal_info .info_item {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+.about .about_content .personal_info .info_item p {
+  font-weight: 600;
+  font-size: 16px;
+  padding: 10px 0;
+  color: var(--text-black-900);
+  border-bottom: 1px solid var(--bg-black-50);
+}
+.about .about_content .personal_info .info_item p span {
+  font-weight: 400;
+  color: var(--text-black-700);
+  margin-left: 4px;
+  display: inline-block;
+}
+.about .about_content .personal_info .buttons {
+  margin-top: 30px;
+}
+.about .about_content .personal_info .buttons .btn {
+  margin-right: 15px;
+  margin-top: 10px;
+}
+/* skills */
+.about .about_content .skills {
+  flex: 0 0 40%;
+  max-width: 0 0 40%;
+  margin-top: 40px;
+}
+
 /* ##______ About Styles (End) _______## */
