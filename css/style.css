@@ -109,6 +109,10 @@ ul {
 .btn:hover {
   transform: scale(1.05);
 }
+
+.shadow_dark {
+  box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+}
 /* ##______ General Styles (End) _______## */
 
 /* ##______ Aside Styles _______## */
@@ -388,5 +392,31 @@ ul {
   top: -40px;
   font-weight: 400;
   line-height: 40px;
+}
+/* Education & Experience */
+.about .about_content .education,
+.about .about_content .experience {
+  flex: 0 0 50%;
+  max-width: 50%;
+  margin-top: 30px;
+}
+.about .about_content h3.title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: var(--text-black-900);
+}
+.about .about_content .timeline_box {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+.about .about_content .timeline {
+  position: relative;
+  background: var(--bg-black-100);
+  padding: 30px 15px;
+  border: 1px solid var(--bg-black-50);
+  border-radius: 10px;
+  width: 100%;
+  position: relative;
 }
 /* ##______ About Styles (End) _______## */
