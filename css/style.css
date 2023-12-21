@@ -319,7 +319,7 @@ ul {
 /* personal info */
 .about .about_content .personal_info {
   flex: 0 0 60%;
-  max-width: 0 0 60%;
+  max-width: 60%;
   margin-top: 40px;
 }
 .about .about_content .personal_info .info_item {
@@ -349,8 +349,44 @@ ul {
 /* skills */
 .about .about_content .skills {
   flex: 0 0 40%;
-  max-width: 0 0 40%;
+  max-width: 40%;
   margin-top: 40px;
 }
-
+.about .about_content .skills .skill_item {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+.about .about_content .skills .skill_item h5 {
+  line-height: 40px;
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--text-black-900);
+  text-transform: capitalize;
+}
+.about .about_content .skills .skill_item .progress {
+  background-color: var(--bg-black-50);
+  height: 7px;
+  border-radius: 4px;
+  width: 100%;
+  position: relative;
+}
+.about .about_content .skills .skill_item {
+  margin-bottom: 25px;
+}
+.about .about_content .skills .skill_item .progress .progress_in {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  border-radius: 4px;
+  background-color: var(--skin-color);
+}
+.about .about_content .skills .skill_item .skill_precent {
+  position: absolute;
+  right: 0;
+  color: var(--text-black-900);
+  top: -40px;
+  font-weight: 400;
+  line-height: 40px;
+}
 /* ##______ About Styles (End) _______## */
