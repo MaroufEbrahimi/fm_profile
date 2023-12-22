@@ -41,8 +41,8 @@ body {
   padding-left: 270px;
 }
 .padd_15 {
-  padding-left: 15px;
-  padding-right: 15px;
+  /* it's similar to padding-right & padding-left */
+  padding-inline: 15px;
 }
 
 ul {
@@ -418,5 +418,53 @@ ul {
   border-radius: 10px;
   width: 100%;
   position: relative;
+}
+.about .about_content .timeline .timeline_item {
+  position: relative;
+  padding-left: 37px;
+  padding-bottom: 50px;
+}
+.about .about_content .timeline .timeline_item:last-child {
+  padding-bottom: 0;
+}
+.about .about_content .timeline .timeline_item::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  background: var(--skin-color);
+  top: 0;
+  left: 7px;
+}
+.about .about_content .timeline .timeline_item .circle_dot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background: var(--skin-color);
+}
+.about .about_content .timeline .timeline_item .timeline_date {
+  font-weight: 400;
+  font-size: 14px;
+  margin-bottom: 12px;
+  color: var(--text-black-700);
+}
+.about .about_content .timeline .timeline_item .timeline_date .fa {
+  margin-right: 5px;
+}
+.about .about_content .timeline .timeline_item .timeline_title {
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--text-black-900);
+  margin-bottom: 15px;
+  text-transform: capitalize;
+}
+.about .about_content .timeline .timeline_item .timeline_text {
+  font-size: 16px;
+  line-height: 25px;
+  text-align: justify;
+  color: var(--text-black-700);
 }
 /* ##______ About Styles (End) _______## */
