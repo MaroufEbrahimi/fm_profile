@@ -468,3 +468,59 @@ ul {
   color: var(--text-black-700);
 }
 /* ##______ About Styles (End) _______## */
+
+/* ##______ Services Styles (Start) _______## */
+.service .container {
+  padding-bottom: 40px;
+}
+.service .service_item {
+  margin-bottom: 30px;
+  flex: 0 0 33.33%;
+  max-width: 33.33%;
+}
+.service .service_item .service_item_inner {
+  background: var(--bg-black-100);
+  border: 1px solid var(--bg-black-50);
+  border-radius: 10px;
+  padding: 30px 15px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.service .service_item .service_item_inner:hover {
+  box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+}
+.service .service_item .service_item_inner .icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 30px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.service .service_item .service_item_inner .icon .fa {
+  font-size: 40px;
+  line-height: 60px;
+  color: var(--skin-color);
+  transition: all 0.3s ease;
+}
+.service .service_item .service_item_inner:hover .icon {
+  background: var(--skin-color);
+}
+.service .service_item .service_item_inner:hover .icon .fa {
+  color: #fff;
+  font-size: 25px;
+}
+.service .service_item .service_item_inner h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: var(--text-black-900);
+  text-transform: capitalize;
+}
+.service .service_item .service_item_inner p {
+  font-size: 16px;
+  color: var(--text-black-700);
+  line-height: 25px;
+}
+/* ##______ Services Styles (End) _______## */
