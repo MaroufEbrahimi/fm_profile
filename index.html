@@ -18,7 +18,7 @@
     <div class="main_container">
       <!-- Aside -->
       <div class="aside">
-        <div class="logo">
+        <div class="logo capitalize">
           <a href="#"><span>M</span>arouf</a>
         </div>
         <div class="nav_toggler">
@@ -47,7 +47,7 @@
       <!-- Main content -->
       <div class="main_content">
         <!-- Home section -->
-        <section class="home section hidden">
+        <section class="home section">
           <div class="container">
             <div class="row">
               <div class="home_info padd_15">
@@ -75,7 +75,7 @@
         <!-- Home section (End) -->
 
         <!-- About section (Start) -->
-        <section class="about section hidden">
+        <section class="about section">
           <div class="container">
             <div class="row">
               <div class="section_title padd_15">
@@ -272,7 +272,7 @@
         <!-- About section (End) -->
 
         <!-- Services section (Start) -->
-        <section class="service section hidden">
+        <section class="service section">
           <div class="container">
             <div class="row">
               <div class="section_title padd_15"><h2>Services</h2></div>
@@ -357,7 +357,7 @@
         </section>
         <!-- Services section (End) -->
         <!-- Portfolio section (Start) -->
-        <section class="portfolio section hidden">
+        <section class="portfolio section">
           <div class="container">
             <div class="row">
               <div class="section_title padd_15"><h2>Portfolio</h2></div>
@@ -426,8 +426,12 @@
               <div class="section_title padd_15"><h2>Contact Me</h2></div>
             </div>
 
-            <h3 class="contact_title">Have You Any Questions ?</h3>
-            <h4 class="contact_sub_title">I'm at your services</h4>
+            <h3 class="contact_title padd_15 capitalize">
+              have you any questions ?
+            </h3>
+            <h4 class="contact_sub_title padd_15 uppercase">
+              I'm at your services
+            </h4>
 
             <div class="row">
               <!-- Contact info items (start) -->
@@ -452,6 +456,65 @@
                 <p>www.domain.com</p>
               </div>
               <!-- Contact info items (end) -->
+            </div>
+
+            <h3 class="contact_title padd_15 uppercase">send me an email</h3>
+            <h4 class="contact_sub_title padd_15 uppercase">
+              I'm very resposive to messages
+            </h4>
+
+            <!-- contact form -->
+            <div class="row">
+              <div class="contact_form padd_15">
+                <div class="row">
+                  <div class="form_item col_6 padd_15">
+                    <div class="form_group">
+                      <input
+                        type="text"
+                        class="form_control"
+                        placeholder="Name"
+                      />
+                    </div>
+                  </div>
+                  <div class="form_item col_6 padd_15">
+                    <div class="form_group">
+                      <input
+                        type="email"
+                        class="form_control"
+                        placeholder="Email"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="form_item col_12 padd_15">
+                    <div class="form_group">
+                      <input
+                        type="text"
+                        class="form_control"
+                        placeholder="Subject"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form_item col_12 padd_15">
+                    <div class="form_group">
+                      <textarea
+                        name=""
+                        class="form_control"
+                        placeholder="Message"
+                      ></textarea>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form_item col_12 padd_15">
+                    <button type="submit" class="btn">Send Message</button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>

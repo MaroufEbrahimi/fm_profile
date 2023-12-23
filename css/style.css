@@ -113,6 +113,14 @@ ul {
 .shadow_dark {
   box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
 }
+
+.capitalize {
+  text-transform: capitalize;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+
 /* ##______ General Styles (End) _______## */
 
 /* ##______ Aside Styles _______## */
@@ -134,7 +142,6 @@ ul {
   position: absolute;
   font-size: 30px;
   top: 50px;
-  text-transform: capitalize;
 }
 .aside .logo a {
   color: var(--text-black-900);
@@ -563,7 +570,6 @@ ul {
   margin-bottom: 20px;
 }
 .contact .contact_sub_title {
-  text-transform: uppercase;
   color: var(--text-black-900);
   text-align: center;
   font-size: 15px;
@@ -573,6 +579,7 @@ ul {
   flex: 0 0 25%;
   max-width: 25%;
   text-align: center;
+  margin-bottom: 60px;
 }
 .contact .contact_info_item .icon {
   display: inline-block;
@@ -593,5 +600,46 @@ ul {
   line-height: 25px;
   font-weight: 400;
   color: var(--text-black-700);
+}
+/* form */
+.contact .contact_form {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+.contact .contact_form .col_6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+.contact .contact_form .col_12 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+.contact .contact_form .form_item {
+  margin-bottom: 30px;
+}
+.contact .contact_form .form_item .form_control {
+  width: 100%;
+  height: 50px;
+  border-radius: 25px;
+  background: var(--bg-black-100);
+  padding: 10px 25px;
+  border: 1px solid var(--bg-black-50);
+  outline: none;
+  font-size: 16px;
+  color: var(--text-black-700);
+  transition: all 0.3s ease;
+}
+.contact .contact_form .form_item .form_control:focus {
+  box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+}
+.contact .contact_form .form_item textarea.form_control {
+  resize: vertical;
+  height: 140px;
+}
+.contact .contact_form .btn {
+  height: 50px;
+  padding: 0 50px;
+  letter-spacing: 0.07em;
+  cursor: pointer;
 }
 /* ##______ Contact Styles (End) _______## */
