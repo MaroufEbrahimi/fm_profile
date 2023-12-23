@@ -524,3 +524,33 @@ ul {
   line-height: 25px;
 }
 /* ##______ Services Styles (End) _______## */
+
+/* ##______ Portfolio Styles (Start) _______## */
+.portfolio .container {
+  padding-bottom: 40px;
+}
+.portfolio .portfolio_heading {
+  flex: 0 0 100%;
+  max-width: 100%;
+  margin-bottom: 40px;
+}
+.portfolio .portfolio_heading h2 {
+  font-weight: 500;
+  color: var(--text-black-900);
+}
+.portfolio .portfolio_item {
+  flex: 0 0 33.33%;
+  max-width: 33.33%;
+  margin-bottom: 30px;
+}
+.portfolio .portfolio_inner {
+  border: 6px solid var(--bg-black-100);
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.portfolio .portfolio_inner .portfolio_img img {
+  width: 100%;
+  display: block;
+}
+/* ##______ Portfolio Styles (End) _______## */
