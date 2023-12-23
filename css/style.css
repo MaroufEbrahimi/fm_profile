@@ -39,6 +39,7 @@ body {
 }
 .main_content {
   padding-left: 270px;
+  transition: all 0.3s ease;
 }
 .padd_15 {
   /* it's similar to padding-right & padding-left */
@@ -137,6 +138,7 @@ ul {
   align-items: center;
   justify-content: center;
   z-index: 10;
+  transition: all 0.3s ease;
 }
 .aside .logo {
   position: absolute;
@@ -643,3 +645,49 @@ ul {
   cursor: pointer;
 }
 /* ##______ Contact Styles (End) _______## */
+
+/* Responsive */
+@media (max-width: 1199px) {
+  .aside {
+    left: -270px;
+  }
+  .main_content {
+    padding-left: 0;
+  }
+
+  .about .about_content .personal_info .info_item p span {
+    display: block;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 991px) {
+  .home .home_info {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .home .home_img {
+    display: none;
+  }
+
+  .service .service_item,
+  .portfolio .portfolio_item,
+  .contact .contact_info_item {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 767px) {
+  .about .about_content .personal_info,
+  .about .about_content .skills,
+  .about .about_content .education,
+  .about .about_content .experience,
+  .service .service_item,
+  .portfolio .portfolio_item,
+  .contact .contact_info_item,
+  .contact .contact_form .col_6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
