@@ -1,8 +1,7 @@
-
-const side = document.getElementById('side');
-function openSide() {
-   side.style.width = '80%';
-}
-function closeSide() {
-   side.style.width = '0';
-}
+/*  __________  Typing Animation __________ */
+var typed = new Typed(".typing", {
+  strings: ["", "Full Stack Developer", "Web Developer", "Teacher"],
+  typeSpeed: 100,
+  backSpeed: 50,
+  loop: true,
+});
