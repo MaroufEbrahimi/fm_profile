@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Personal Profile</title>
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/color-1.css" />
+    <link rel="stylesheet" href="./css/skins/color-1.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
+    <link rel="stylesheet" href="./css/style-switcher.css" />
   </head>
 
   <body>
@@ -522,8 +523,28 @@
       </div>
       <!-- Main content (End) -->
     </div>
-
     <!-- Main Container (End) -->
+
+    <!-- Style Switcher (Start) -->
+    <div class="style_switcher">
+      <div class="style_switcher_toggle s_icon">
+        <i class="fas fa-cog fa-spin"></i>
+      </div>
+
+      <div class="day_night s_icon">
+        <i class="fas fa-moon"></i>
+      </div>
+
+      <h4 class="capitalize">Theme Colors</h4>
+      <div class="colors">
+        <span class="color-1" onclick="setActiveStyle('color-1')"></span>
+        <span class="color-2" onclick="setActiveStyle('color-2')"></span>
+        <span class="color-3" onclick="setActiveStyle('color-3')"></span>
+        <span class="color-4" onclick="setActiveStyle('color-4')"></span>
+        <span class="color-5" onclick="setActiveStyle('color-5')"></span>
+      </div>
+    </div>
+    <!-- Style Switcher (End) -->
 
     <!-- JS files -->
     <script src="./js/script.js"></script>
