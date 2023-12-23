@@ -9,6 +9,10 @@
   z-index: 101;
   border-radius: 5px;
   transition: all 0.3s ease;
+  transform: translateX(100%);
+}
+.style_switcher.open {
+  transform: translateX(-25px);
 }
 
 .style_switcher .s_icon {
@@ -42,4 +46,33 @@
   color: var(--text-black-700);
   font-size: 16px;
   font-weight: 600;
+}
+
+/* colors */
+.style_switcher .colors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.style_switcher .colors span {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.style_switcher .colors .color-1 {
+  background-color: #ffc451;
+}
+.style_switcher .colors .color-2 {
+  background-color: #fa5b0f;
+}
+.style_switcher .colors .color-3 {
+  background-color: #37b182;
+}
+.style_switcher .colors .color-4 {
+  background-color: #1854b4;
+}
+.style_switcher .colors .color-5 {
+  background-color: #f021b2;
 }
