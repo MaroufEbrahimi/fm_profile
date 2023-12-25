@@ -41,6 +41,25 @@ function showSection(ele) {
   document.querySelector("#" + target).classList.add("active");
 }
 
+/*  __________ Hire Me __________ */
+document.querySelector(".hire_me").addEventListener("click", function () {
+  showSection(this);
+  updateNav(this);
+});
+
+function updateNav(ele) {
+  for (let a = 0; a < totalNavList; a++) {
+    navList[a].querySelector("a").classList.remove("active");
+    const target = ele.getAttribute("href").split("#")[1];
+    if (
+      target ===
+      navList[a].querySelector("a").getAttribute("href").split("#")[1]
+    ) {
+      navList[a].querySelector("a").classList.add("active");
+    }
+  }
+}
+
 /*  __________ Nav Toggle __________ */
 const navTogglerBtn = document.querySelector(".nav_toggler"),
   aside = document.querySelector(".aside");
