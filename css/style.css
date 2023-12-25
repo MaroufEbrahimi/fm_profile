@@ -41,12 +41,37 @@ body {
   display: block;
   padding: 0 30px;
   opacity: 1;
+  position: fixed;
+  left: 270px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: all 0.3s ease;
 }
+.section.back-section {
+  z-index: 1;
+}
+.section.active {
+  z-index: 2;
+  opacity: 1;
+  animation: slideSection 1s ease;
+}
+@keyframes slideSection {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
 .hidden {
   display: none !important;
 }
 .main_content {
-  padding-left: 270px;
   transition: all 0.3s ease;
 }
 .padd_15 {
@@ -199,6 +224,7 @@ ul {
   display: none;
   align-items: center;
   justify-content: center;
+  transition: all 0.3s ease;
 }
 .aside .nav_toggler span {
   height: 2px;
@@ -206,6 +232,9 @@ ul {
   background-color: var(--skin-color);
   display: inline-block;
   position: relative;
+}
+.aside .nav_toggler.open span {
+  background: transparent;
 }
 .aside .nav_toggler span::before {
   content: "";
@@ -216,6 +245,10 @@ ul {
   top: -6px;
   left: 0;
 }
+.aside .nav_toggler.open span::before {
+  transform: rotate(45deg);
+  top: 0;
+}
 .aside .nav_toggler span::after {
   content: "";
   height: 2px;
@@ -224,6 +257,10 @@ ul {
   position: absolute;
   top: 6px;
   left: 0;
+}
+.aside .nav_toggler.open span::after {
+  transform: rotate(-45deg);
+  top: 0;
 }
 .aside .nav {
   margin-top: 50px;
@@ -364,7 +401,6 @@ ul {
   margin-top: 30px;
 }
 .about .about_content .personal_info .buttons .btn {
-  margin-right: 15px;
   margin-top: 10px;
 }
 /* skills */
@@ -659,10 +695,22 @@ ul {
   .aside {
     left: -270px;
   }
-  .main_content {
-    padding-left: 0;
+  .aside.open {
+    left: 0;
   }
-
+  .aside .nav_toggler {
+    display: flex;
+    left: 30px;
+  }
+  .aside .nav_toggler.open {
+    left: 300px;
+  }
+  .section {
+    left: 0;
+  }
+  .section.open {
+    left: 270px;
+  }
   .about .about_content .personal_info .info_item p span {
     display: block;
     margin-left: 0;
