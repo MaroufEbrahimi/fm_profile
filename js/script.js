@@ -16,12 +16,10 @@ const nav = document.querySelector(".nav"),
 for (let i = 0; i < totalNavList; i++) {
   const a = navList[i].querySelector("a");
   a.addEventListener("click", function () {
-    for (let a = 0; a < totalSection; a++) {
-      allSection[a].classList.remove("back-section");
-    }
+    removeBackSection();
     for (let j = 0; j < totalNavList; j++) {
       if (navList[j].querySelector("a").classList.contains("active")) {
-        allSection[j].classList.add("back-section");
+        addBackSection(j);
       }
       navList[j].querySelector("a").classList.remove("active");
     }
@@ -41,10 +39,23 @@ function showSection(ele) {
   document.querySelector("#" + target).classList.add("active");
 }
 
+function removeBackSection() {
+  for (let a = 0; a < totalSection; a++) {
+    allSection[a].classList.remove("back-section");
+  }
+}
+
+function addBackSection(num) {
+  allSection[num].classList.add("back-section");
+}
+
 /*  __________ Hire Me __________ */
 document.querySelector(".hire_me").addEventListener("click", function () {
+  const sectionIndex = this.getAttribute("data-section-index");
   showSection(this);
   updateNav(this);
+  removeBackSection();
+  addBackSection(sectionIndex);
 });
 
 function updateNav(ele) {
