@@ -27,6 +27,9 @@ for (let i = 0; i < totalNavList; i++) {
     }
     this.classList.add("active");
     showSection(this);
+    if (window.innerWidth < 1200) {
+      asideSectionTogglerBut();
+    }
   });
 }
 
@@ -36,4 +39,19 @@ function showSection(ele) {
   }
   const target = ele.getAttribute("href").split("#")[1];
   document.querySelector("#" + target).classList.add("active");
+}
+
+/*  __________ Nav Toggle __________ */
+const navTogglerBtn = document.querySelector(".nav_toggler"),
+  aside = document.querySelector(".aside");
+navTogglerBtn.addEventListener("click", () => {
+  asideSectionTogglerBut();
+});
+
+function asideSectionTogglerBut() {
+  aside.classList.toggle("open");
+  navTogglerBtn.classList.toggle("open");
+  for (let a = 0; a < totalSection; a++) {
+    allSection[a].classList.toggle("open");
+  }
 }
