@@ -155,6 +155,20 @@ ul {
   text-transform: uppercase;
 }
 
+/* Scroll bar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ddd;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--skin-color);
+  border-radius: 10px;
+}
+
 /* ##______ General Styles (End) _______## */
 
 /* ##______ Aside Styles _______## */
