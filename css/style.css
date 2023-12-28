@@ -726,7 +726,7 @@ ul {
     left: 0;
   }
   .section.open {
-    left: 270px;
+    /* left: 270px; */
   }
   .about .about_content .personal_info .info_item p span {
     display: block;
