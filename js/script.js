@@ -58,6 +58,15 @@ document.querySelector(".hire_me").addEventListener("click", function () {
   addBackSection(sectionIndex);
 });
 
+/*  __________ Redirect to Home when click the logo __________ */
+document.querySelector(".logo_link").addEventListener("click", function () {
+  const sectionIndex = this.getAttribute("data-section-index");
+  showSection(this);
+  updateNav(this);
+  removeBackSection();
+  addBackSection(sectionIndex);
+});
+
 function updateNav(ele) {
   for (let a = 0; a < totalNavList; a++) {
     navList[a].querySelector("a").classList.remove("active");

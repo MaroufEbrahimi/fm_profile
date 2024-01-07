@@ -129,9 +129,10 @@ ul {
   position: relative;
 }
 .btn {
-  font-size: 16px;
-  font-weight: 500;
-  padding: 12px 35px;
+  font-size: 16.3px;
+  font-weight: 250;
+  font-family: "Poppins";
+  padding: 12px 30px;
   color: white;
   border: none;
   border-radius: 40px;
@@ -724,9 +725,6 @@ ul {
   }
   .section {
     left: 0;
-  }
-  .section.open {
-    /* left: 270px; */
   }
   .about .about_content .personal_info .info_item p span {
     display: block;
