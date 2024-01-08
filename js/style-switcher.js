@@ -13,6 +13,7 @@ window.addEventListener("scroll", () => {
 
 /*  __________  Theme Colors __________ */
 const alternateStyles = document.querySelectorAll(".alternate-style");
+
 function setActiveStyle(color) {
   alternateStyles.forEach((style) => {
     if (color === style.getAttribute("title")) {
@@ -21,7 +22,18 @@ function setActiveStyle(color) {
       style.setAttribute("disabled", "true");
     }
   });
+
+  // Save the selected theme to local storage
+  localStorage.setItem("SelectedTheme", color);
 }
+
+function initializeTheme() {
+  const savedTheme = localStorage.getItem("SelectedTheme");
+  if (savedTheme) {
+    setActiveStyle(savedTheme);
+  }
+}
+window.addEventListener("load", initializeTheme);
 
 /*  __________  Theme light & dark __________ */
 const dayNight = document.querySelector(".day_night");
