@@ -7,6 +7,7 @@
   --bg-black-50: #e8dfec;
   --text-black-900: #302e4d;
   --text-black-700: #504e70;
+  --text-btn-color: white;
 }
 
 body.dark {
@@ -15,6 +16,7 @@ body.dark {
   --bg-black-50: #393939;
   --text-black-900: #ffffff;
   --text-black-700: #e9e9e9;
+  --text-btn-color: black;
 }
 
 body {
@@ -130,10 +132,10 @@ ul {
 }
 .btn {
   font-size: 16.3px;
-  font-weight: 250;
+  font-weight: 400;
   font-family: "Poppins";
   padding: 12px 30px;
-  color: white;
+  color: var(--text-btn-color);
   border: none;
   border-radius: 40px;
   display: inline-block;
