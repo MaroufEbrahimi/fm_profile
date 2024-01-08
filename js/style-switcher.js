@@ -29,11 +29,22 @@ dayNight.addEventListener("click", () => {
   dayNight.querySelector("i").classList.toggle("fa-sun");
   dayNight.querySelector("i").classList.toggle("fa-moon");
   document.body.classList.toggle("dark");
+
+  // Save theme preference to local storage
+  localStorage.setItem(
+    "PageTheme",
+    document.body.classList.contains("dark") ? "dark" : "light"
+  );
 });
+
 window.addEventListener("load", () => {
-  if (document.body.classList.contains("dark")) {
+  // Retrieve theme preference from local storage
+  const savedTheme = localStorage.getItem("PageTheme");
+  if (savedTheme === "dark") {
+    document.body.classList.add("dark");
     dayNight.querySelector("i").classList.add("fa-sun");
   } else {
+    document.body.classList.remove("dark");
     dayNight.querySelector("i").classList.add("fa-moon");
   }
 });
