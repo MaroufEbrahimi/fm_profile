@@ -6,6 +6,8 @@ var typed = new Typed(".typing", {
   loop: true,
 });
 
+document.getElementById("downloadLink").click();
+
 /*  __________ Asid Links Navigate __________ */
 const nav = document.querySelector(".nav"),
   navList = nav.querySelectorAll("li"),
