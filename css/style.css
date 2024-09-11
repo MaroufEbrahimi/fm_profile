@@ -330,9 +330,18 @@ ul {
   color: var(--skin-color);
 }
 .home_info p {
-  margin-bottom: 70px;
   font-size: 20px;
   color: var(--text-black-700);
+}
+.home_info .social_media_links {
+  margin: 15px 0 50px 10px;
+}
+.home_info .social_media_links a {
+  font-size: 23px;
+  color: var(--skin-color);
+}
+.home_info .social_media_links a i {
+  padding: 10px;
 }
 /* home img */
 .home .home_img {
@@ -643,7 +652,7 @@ ul {
   margin: 15px 0 5px;
 }
 .contact .contact_info_item p,
-.contact .contact_info_item p > a{
+.contact .contact_info_item p > a {
   font-size: 16px;
   line-height: 25px;
   font-weight: 400;
