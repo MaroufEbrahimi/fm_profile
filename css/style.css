@@ -160,7 +160,7 @@ ul {
 
 /* Scroll bar */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -337,34 +337,17 @@ ul {
 /* home img */
 .home .home_img {
   flex: 0 0 40%;
-  max-width: 40%;
+  max-width: 37%;
   text-align: center;
   position: relative;
 }
-.home .home_img::after {
-  content: "";
-  position: absolute;
-  height: 80px;
-  width: 80px;
-  border-bottom: 10px solid var(--skin-color);
-  border-right: 10px solid var(--skin-color);
-  right: -20px;
-  bottom: -40px;
-}
-.home .home_img::before {
-  content: "";
-  position: absolute;
-  height: 80px;
-  width: 80px;
-  border-top: 10px solid var(--skin-color);
-  border-left: 10px solid var(--skin-color);
-  left: -20px;
-  top: -40px;
-}
+
 .home .home_img img {
   margin: auto;
-  border-radius: 5px;
   height: 400px;
+  background-color: var(--skin-color);
+  padding: 15px;
+  border-radius: 10px !important;
 }
 /* ##______ Home Styles (End) _______## */
 
@@ -393,13 +376,13 @@ ul {
 }
 /* personal info */
 .about .about_content .personal_info {
-  flex: 0 0 60%;
-  max-width: 60%;
+  flex: 0 0 33%;
+  max-width: 33%;
   margin-top: 40px;
 }
 .about .about_content .personal_info .info_item {
-  flex: 0 0 50%;
-  max-width: 50%;
+  flex: 0 0 100%;
+  max-width: 100%;
 }
 .about .about_content .personal_info .info_item p {
   font-weight: 600;
@@ -422,13 +405,13 @@ ul {
 }
 /* skills */
 .about .about_content .skills {
-  flex: 0 0 40%;
-  max-width: 40%;
+  flex: 0 0 67%;
+  max-width: 67%;
   margin-top: 40px;
 }
 .about .about_content .skills .skill_item {
-  flex: 0 0 100%;
-  max-width: 100%;
+  flex: 0 0 50%;
+  max-width: 50%;
 }
 .about .about_content .skills .skill_item h5 {
   line-height: 40px;
@@ -754,6 +737,7 @@ ul {
 @media (max-width: 767px) {
   .about .about_content .personal_info,
   .about .about_content .skills,
+  .about .about_content .skills .skill_item,
   .about .about_content .education,
   .about .about_content .experience,
   .service .service_item,
@@ -762,5 +746,11 @@ ul {
   .contact .contact_form .col_6 {
     flex: 0 0 100%;
     max-width: 100%;
+  }
+}
+
+@media (max-width: 378px) {
+  .home {
+    padding-top: 2.2rem;
   }
 }

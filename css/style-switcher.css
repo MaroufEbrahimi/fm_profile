@@ -1,6 +1,6 @@
 .style_switcher {
   position: fixed;
-  top: 60px;
+  top: 30px;
   right: 0;
   padding: 15px;
   width: 200px;
@@ -35,7 +35,7 @@
 }
 
 .style_switcher .style_switcher_toggle {
-  top: 0;
+  top: 3px;
 }
 .style_switcher .day_night {
   top: 55px;
