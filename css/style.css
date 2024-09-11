@@ -642,7 +642,8 @@ ul {
   text-transform: capitalize;
   margin: 15px 0 5px;
 }
-.contact .contact_info_item p {
+.contact .contact_info_item p,
+.contact .contact_info_item p > a{
   font-size: 16px;
   line-height: 25px;
   font-weight: 400;
@@ -682,6 +683,7 @@ ul {
 .contact .contact_form .form_item textarea.form_control {
   resize: vertical;
   height: 140px;
+  min-height: 100px;
 }
 .contact .contact_form .btn {
   height: 50px;
