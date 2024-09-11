@@ -6,8 +6,6 @@ var typed = new Typed(".typing", {
   loop: true,
 });
 
-document.getElementById("downloadLink").click();
-
 /*  __________ Asid Links Navigate __________ */
 const nav = document.querySelector(".nav"),
   navList = nav.querySelectorAll("li"),
@@ -85,7 +83,7 @@ function updateNav(ele) {
 /*  __________ Nav Toggle __________ */
 const navTogglerBtn = document.querySelector(".nav_toggler"),
   aside = document.querySelector(".aside");
-navTogglerBtn.addEventListener("click", () => {
+  navTogglerBtn.addEventListener("click", () => {
   asideSectionTogglerBut();
 });
 
