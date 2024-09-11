@@ -590,6 +590,7 @@ ul {
 .portfolio .portfolio_heading h2 {
   font-weight: 500;
   color: var(--text-black-900);
+  text-align: center;
 }
 .portfolio .portfolio_item {
   flex: 0 0 33.33%;
