@@ -113,8 +113,15 @@ function sendMail() {
       document.getElementById("email").value = "";
       document.getElementById("subject").value = "";
       document.getElementById("message").value = "";
-      console.log(res);
-      alert("your message send successfully!");
+
+      // Show success Modal
+      const modal = document.getElementById("successModal");
+      modal.style.display = "flex";
+
+      // Hide Modal after 3 second
+      setTimeout(() => {
+        modal.style.display = "none";
+      }, 5000);
     })
     .catch((err) => console.log(err));
 }
