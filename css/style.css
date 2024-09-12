@@ -809,4 +809,14 @@ ul {
   .home {
     padding-top: 2.2rem;
   }
+  /* ##______ Modal Styles _______## */
+  .modal {
+    top: 10%;
+    padding: 8px 5px;
+    min-width: 220px;
+  }
+  .modal p {
+    font-size: 14px;
+    white-space: wrap;
+  }
 }
