@@ -702,7 +702,7 @@ ul {
 }
 /* ##______ Contact Styles (End) _______## */
 
-/* ##______ Modal Styles (End) _______## */
+/* ##______ Modal Styles _______## */
 .modal {
   background-color: var(--skin-color);
   position: absolute;
@@ -737,6 +737,13 @@ ul {
   to {
     top: 7%;
   }
+}
+/* ##______ Modal Styles (End) _______## */
+
+.error-message {
+  font-size: 0.875em;
+  margin-top: 3px;
+  margin-left: 10px;
 }
 
 /* Responsive */

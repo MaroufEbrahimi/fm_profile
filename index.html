@@ -615,7 +615,7 @@
             </h4>
 
             <!-- contact form -->
-            <div class="row">
+            <form class="row" id="contactForm">
               <div class="contact_form padd_15">
                 <div class="row">
                   <div class="form_item col_6 padd_15">
@@ -625,6 +625,7 @@
                         class="form_control"
                         id="name"
                         placeholder="Name"
+                        required
                       />
                     </div>
                   </div>
@@ -635,7 +636,14 @@
                         class="form_control"
                         id="email"
                         placeholder="Email"
+                        required
                       />
+                      <div
+                        class="error-message"
+                        style="color: red; display: none"
+                      >
+                        Please enter a valid email address
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -648,6 +656,7 @@
                         class="form_control"
                         id="subject"
                         placeholder="Subject"
+                        required
                       />
                     </div>
                   </div>
@@ -660,19 +669,18 @@
                         class="form_control"
                         id="message"
                         placeholder="Message"
+                        required
                       ></textarea>
                     </div>
                   </div>
                 </div>
                 <div class="row">
                   <div class="form_item col_12 padd_15">
-                    <button class="btn" onclick="sendMail()">
-                      Send Message
-                    </button>
+                    <button type="submit" class="btn">Send Message</button>
                   </div>
                 </div>
               </div>
-            </div>
+            </form>
           </div>
         </section>
         <!-- Contact section (End) -->

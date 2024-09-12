@@ -94,8 +94,39 @@ function asideSectionTogglerBut() {
     allSection[a].classList.toggle("open");
   }
 }
+/* __________ Email Checker __________ */
+document.addEventListener("DOMContentLoaded", function () {
+  const emailInput = document.getElementById("email");
+  const errorMsg = document.querySelector(".error-message");
 
-/*  __________ Email JS Handler __________ */
+  emailInput.addEventListener("input", function () {
+    if (!emailInput.checkValidity()) {
+      errorMsg.style.display = "block";
+      errorMsg.textContent = emailInput.validationMessage;
+    } else {
+      errorMsg.style.display = "none";
+    }
+  });
+});
+
+/* __________ Form Submission __________ */
+document
+  .getElementById("contactForm")
+  .addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    if (validateForm()) {
+      sendMail();
+    } else {
+      console.log("Form validation failed.");
+    }
+  });
+
+function validateForm() {
+  const emailInput = document.getElementById("email");
+  return emailInput.checkValidity();
+}
+
 function sendMail() {
   let params = {
     name: document.getElementById("name").value,
@@ -118,7 +149,7 @@ function sendMail() {
       const modal = document.getElementById("successModal");
       modal.style.display = "flex";
 
-      // Hide Modal after 3 second
+      // Hide Modal after 5 seconds
       setTimeout(() => {
         modal.style.display = "none";
       }, 5000);
