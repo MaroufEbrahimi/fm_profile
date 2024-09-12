@@ -52,6 +52,19 @@
       disabled
     />
     <link rel="stylesheet" href="./css/style-switcher.css" />
+
+    <!-- links of EmailJS -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "4hEo0AbKsGXut7VBw",
+        });
+      })();
+    </script>
   </head>
 
   <body>
@@ -610,6 +623,7 @@
                       <input
                         type="text"
                         class="form_control"
+                        id="name"
                         placeholder="Name"
                       />
                     </div>
@@ -619,6 +633,7 @@
                       <input
                         type="email"
                         class="form_control"
+                        id="email"
                         placeholder="Email"
                       />
                     </div>
@@ -631,6 +646,7 @@
                       <input
                         type="text"
                         class="form_control"
+                        id="subject"
                         placeholder="Subject"
                       />
                     </div>
@@ -642,6 +658,7 @@
                       <textarea
                         name=""
                         class="form_control"
+                        id="message"
                         placeholder="Message"
                       ></textarea>
                     </div>
@@ -649,7 +666,9 @@
                 </div>
                 <div class="row">
                   <div class="form_item col_12 padd_15">
-                    <button type="submit" class="btn">Send Message</button>
+                    <button class="btn" onclick="sendMail()">
+                      Send Message
+                    </button>
                   </div>
                 </div>
               </div>

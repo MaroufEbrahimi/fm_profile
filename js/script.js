@@ -83,7 +83,7 @@ function updateNav(ele) {
 /*  __________ Nav Toggle __________ */
 const navTogglerBtn = document.querySelector(".nav_toggler"),
   aside = document.querySelector(".aside");
-  navTogglerBtn.addEventListener("click", () => {
+navTogglerBtn.addEventListener("click", () => {
   asideSectionTogglerBut();
 });
 
@@ -93,4 +93,28 @@ function asideSectionTogglerBut() {
   for (let a = 0; a < totalSection; a++) {
     allSection[a].classList.toggle("open");
   }
+}
+
+/*  __________ Email JS Handler __________ */
+function sendMail() {
+  let params = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    subject: document.getElementById("subject").value,
+    message: document.getElementById("message").value,
+  };
+  const serviceID = "service_djyrova";
+  const templateID = "template_gv72xhr";
+
+  emailjs
+    .send(serviceID, templateID, params)
+    .then((res) => {
+      document.getElementById("name").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("subject").value = "";
+      document.getElementById("message").value = "";
+      console.log(res);
+      alert("your message send successfully!");
+    })
+    .catch((err) => console.log(err));
 }
