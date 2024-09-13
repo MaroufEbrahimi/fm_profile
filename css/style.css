@@ -700,6 +700,38 @@ ul {
   letter-spacing: 0.07em;
   cursor: pointer;
 }
+.contact .contact_form .form_item_button .btn_loading {
+  position: relative;
+  overflow: hidden;
+}
+.contact_form .form_item_button .button_text {
+  position: relative;
+  z-index: 1;
+}
+.form_item_button .btn_loading .spinner {
+  position: absolute;
+  border: 4px solid rgba(138, 137, 137, 0.3);
+  border-radius: 50%;
+  border-top: 4px solid white;
+  width: 24px;
+  height: 24px;
+  animation: spinner 1s linear infinite;
+  visibility: hidden;
+  z-index: 0;
+  margin-left: 10px;
+}
+.btn_loading.show-spinner .spinner {
+  visibility: visible; /* Show spinner */
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 /* ##______ Contact Styles (End) _______## */
 
 /* ##______ Modal Styles _______## */

@@ -137,9 +137,16 @@ function sendMail() {
   const serviceID = "service_djyrova";
   const templateID = "template_gv72xhr";
 
+  // Get the button element
+  const buttonLoading = document.querySelector(".btn_loading");
+  buttonLoading.classList.add("show-spinner");
+
   emailjs
     .send(serviceID, templateID, params)
     .then((res) => {
+      // Hide the spinner by removing the class
+      buttonLoading.classList.remove("show-spinner");
+
       document.getElementById("name").value = "";
       document.getElementById("email").value = "";
       document.getElementById("subject").value = "";
@@ -154,5 +161,9 @@ function sendMail() {
         modal.style.display = "none";
       }, 5000);
     })
-    .catch((err) => console.log(err));
+    .catch((err) => {
+      // Hide the spinner in case of error
+      button.classList.remove("show-spinner");
+      console.log(err);
+    });
 }
