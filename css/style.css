@@ -744,7 +744,6 @@ ul {
     left: 0;
   }
   .about .about_content .personal_info .info_item p span {
-    display: block;
     margin-left: 0;
   }
 }
