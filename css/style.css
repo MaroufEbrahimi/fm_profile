@@ -356,7 +356,8 @@ ul {
   height: 400px;
   background-color: var(--skin-color);
   padding: 15px;
-  border-radius: 10px !important;
+  border-radius: 20px !important;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
 }
 /* ##______ Home Styles (End) _______## */
 
