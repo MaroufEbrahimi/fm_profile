@@ -128,42 +128,44 @@ function validateForm() {
 }
 
 function sendMail() {
-  let params = {
+  const params = {
     name: document.getElementById("name").value,
     email: document.getElementById("email").value,
     subject: document.getElementById("subject").value,
     message: document.getElementById("message").value,
   };
+
   const serviceID = "service_djyrova";
   const templateID = "template_gv72xhr";
 
-  // Get the button element
   const buttonLoading = document.querySelector(".btn_loading");
+
   buttonLoading.classList.add("show-spinner");
 
   emailjs
     .send(serviceID, templateID, params)
     .then((res) => {
-      // Hide the spinner by removing the class
       buttonLoading.classList.remove("show-spinner");
 
-      document.getElementById("name").value = "";
-      document.getElementById("email").value = "";
-      document.getElementById("subject").value = "";
-      document.getElementById("message").value = "";
+      console.log("SUCCESS:", res.status, res.text);
 
-      // Show success Modal
+      document.getElementById("contactForm").reset();
+
       const modal = document.getElementById("successModal");
-      modal.style.display = "flex";
 
-      // Hide Modal after 5 seconds
-      setTimeout(() => {
-        modal.style.display = "none";
-      }, 5000);
+      if (modal) {
+        modal.style.display = "flex";
+
+        setTimeout(() => {
+          modal.style.display = "none";
+        }, 5000);
+      }
     })
     .catch((err) => {
-      // Hide the spinner in case of error
-      button.classList.remove("show-spinner");
-      console.log(err);
+      buttonLoading.classList.remove("show-spinner");
+
+      console.error("EmailJS Error:");
+      console.error("Status:", err.status);
+      console.error("Text:", err.text);
     });
 }
